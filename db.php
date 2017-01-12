@@ -4,9 +4,10 @@ class Database {
 	
 	public function query($query) {
 
-		$db_host = "[DB_HOST]";
-		$db_user = "[DB_USER]";
-		$db_password = "[DB_PASSWORD]";
+		$db_host = "%%DB_HOST%%";
+		$db_user = "%%DB_USER%%";
+		$db_password = "%%DB_PASSWORD%%";
+		$db_name = "%%DB_NAME%%"
 
 		$con = mysql_connect($db_host, $db_user, $db_password) or die(mysql_error());
 		$connect = mysql_select_db($db_name, $con) or die(mysql_error());
